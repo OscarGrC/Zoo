@@ -1,0 +1,48 @@
+-- Tabla de Animales
+CREATE TABLE IF NOT EXISTS AnimalTable (
+    id                INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre            TEXT NOT NULL,
+    nombreCientifico  TEXT    NOT NULL,
+    clase             TEXT NOT NULL,
+    habitat           TEXT NOT NULL,
+    fechaNacimiento   TEXT NOT NULL,
+    dieta             TEXT NOT NULL,
+    peso              REAL NOT NULL,
+    tamanio           REAL NOT NULL,
+    imagen            TEXT NOT NULL
+);
+
+-- Datos de prueba
+INSERT INTO AnimalTable (nombre,nombreCientifico,clase,habitat,fechaNacimiento,dieta,peso,tamanio,imagen)
+VALUES ('Laika', 'Canis lupus familiaris', 'Mamifero', 'Eurasia', '1954-02-02', 'Omnívoro', 10.2,80.1,'1685562882347.jpg'),
+       ('Ham', 'Pan troglodytes', 'Mamifero', 'Africa','1991-02-02', 'Omnívoro',65.2, 130, '1685562938283.jpg'),
+       ('Koko', 'Troglodytes gorilla', 'Mamifero', 'Africa','2020-03-03', 'Omnívoro', 150.32, 165.12,'1685601967067.jpg'),
+       ('Dolly', 'Ovis orientalis aries', 'Mamifero', 'Escocia','2022-04-04', 'Herbivoro',65.5, 70, '1685601795955.jpg'),
+       ('April', 'Giraffa camelopardalis', 'Mamifero','Africa', '2021-05-05','Herbivoro', 1442.53, 498.76, '1682763355435.jpg'),
+       ('Seabiscuit', 'Equus caballus', 'Mamifero','Cáucaso', '2012-06-06', 'Herbivoro',763.5, 185.2,'1685601671003.jpg'),
+       ('Cher Ami', 'Columbidae', 'Ave','Eurasia', '2021-01-06', 'Omnívoro',0.23, 15.2,'1685601535694.jpg'),
+       ('Clara', 'Rhinocerotidae', 'Mamifero','Eurasia', '2021-06-06', 'Herbivoro',3263.5, 205.2,'1685607653647.jpg'),
+       ('Leo', 'Panthera leo', 'Mamifero','Africa', '2001-06-06', 'Carnivoro',163.52, 110.2,'1685601832713.jpg'),
+       ('Merlin', 'Epinephelus lanceolatus', 'Pez','Asia', '2020-09-26', 'Piscívoro',563.5, 267.2,'1685601649098.jpg'),
+       ('Allons-y', 'Chelonia mydas', 'Reptil','Oceano', '1920-09-26', 'Herbivoro',193.35, 154.2,'1685601474977.jpg');
+
+deleteAll:
+DELETE FROM AnimalTable;
+
+selectAll:
+SELECT * FROM AnimalTable ORDER BY nombreCientifico ASC;
+
+selectById:
+SELECT * FROM AnimalTable WHERE id = ?;
+
+selectLastInserted:
+SELECT * FROM AnimalTable WHERE id = last_insert_rowid();
+
+insert:
+INSERT INTO AnimalTable(nombre,nombreCientifico,clase,habitat,fechaNacimiento,dieta,peso,tamanio,imagen) VALUES (?, ?, ?, ?, ?, ?, ?,?,?);
+
+update:
+UPDATE AnimalTable SET nombre = ?, nombreCientifico = ?, clase = ?, habitat = ?, fechaNacimiento = ?, dieta = ?,peso = ?,tamanio = ?, imagen = ? WHERE id = ?;
+
+delete:
+DELETE FROM AnimalTable WHERE id = ?;

@@ -1,0 +1,13 @@
+
+_kotlin:S107˜"GThis function has 9 parameters, which is greater than the 7 authorized.(ÿ¼Š
+ekotlin:S107µ"HThis function has 10 parameters, which is greater than the 7 authorized.(É½§´ıÿÿÿÿ
+dkotlin:S107"HThis function has 10 parameters, which is greater than the 7 authorized.(Æ²ªÚşÿÿÿÿ
+dkotlin:S107<"HThis function has 10 parameters, which is greater than the 7 authorized.(ÿ¾Ğ²şÿÿÿÿ
+dkotlin:S107f"HThis function has 10 parameters, which is greater than the 7 authorized.(Ü²ì™şÿÿÿÿ
+:kotlin:S1128"Remove this redundant import.(ĞĞğÿÿÿÿÿ
+4kotlin:S1128	"Remove this redundant import.(éùƒ
+:kotlin:S1128
+"Remove this redundant import.(ò—‡€ùÿÿÿÿ
+5kotlin:S1128"Remove this redundant import.(Õì“•
+5kotlin:S1128"Remove this redundant import.(š¡ş
+ekotlin:S117V"NRename this parameter to match the regular expression ^`?[_a-z][a-zA-Z0-9]*`?$(ĞÉäô
